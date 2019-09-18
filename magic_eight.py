@@ -7,14 +7,17 @@ def get_answer():
 	rand_num = random.randint(0,20)
 	return possible_questions[rand_num]
 
-response = ""
-while response != "quit":
-	response = input("What is your question?")
-	if response == "quit":
-		break
-	if response[-1] == "?":
-		answer = get_answer()
-		print(answer)
-	else:
-		print("I'm sorry, I can only answer questions")
+def ask_question():
+	response = ""
+	while response != "quit":
+		response = input("What is your question?")
+		if response == "quit":
+			break
+		if response[-1] == "?":
+			answer = get_answer()
+			print(answer)
+		else:
+			print("I'm sorry, I can only answer questions")
 
+
+ask_question()
