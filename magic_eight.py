@@ -9,7 +9,6 @@ def get_answer(dict):
 response = ""
 while response != "quit":
 	response = input("What is your question?")
-	print(response[-1])
 	if response == "quit":
 		break
 	if response[-1] != "?":
